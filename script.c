@@ -4,8 +4,10 @@
 int main() {
     int actionPerformed = 0;
     while (1) {
-        if ((GetAsyncKeyState(VK_SPACE) & 0x8001) && (!actionPerformed)) {
-            printf("Hello, World!\n");
+        if ((GetAsyncKeyState(VK_ESCAPE) & 0x8001) && (!actionPerformed)) {
+            Sleep(1);
+            keybd_event(VK_DOWN, 0, 0, 0);
+            keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);
             actionPerformed = 1;
         } else if (!(GetAsyncKeyState(VK_SPACE)) & 0x8001) {
             actionPerformed = 0;
