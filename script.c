@@ -13,6 +13,9 @@ int main() {
 
             keybd_event(VK_RIGHT, 0, 0, 0);
             keybd_event(VK_RIGHT, 0, KEYEVENTF_KEYUP, 0);
+
+            keybd_event(VK_RETURN, 0, 0, 0);
+            keybd_event(VK_RETURN, 0, KEYEVENTF_KEYUP, 0);
             actionPerformed = 1;
         } else if (!(GetAsyncKeyState(VK_SPACE)) & 0x8001) {
             actionPerformed = 0;
