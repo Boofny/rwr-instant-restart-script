@@ -10,6 +10,9 @@ int main() {
             Sleep(1);
             keybd_event(VK_DOWN, 0, 0, 0);
             keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);
+
+            keybd_event(VK_RIGHT, 0, 0, 0);
+            keybd_event(VK_RIGHT, 0, KEYEVENTF_KEYUP, 0);
             actionPerformed = 1;
         } else if (!(GetAsyncKeyState(VK_SPACE)) & 0x8001) {
             actionPerformed = 0;
