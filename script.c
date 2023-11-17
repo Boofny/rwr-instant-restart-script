@@ -3,6 +3,8 @@
 
 int main() {
     int actionPerformed = 0;
+    printf("The script is ready!\n");
+    printf("Press 'ESC' when you want to restart your run.\n");
     while (1) {
         if ((GetAsyncKeyState(VK_ESCAPE) & 0x8001) && (!actionPerformed)) {
             Sleep(1);
