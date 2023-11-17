@@ -7,13 +7,18 @@ int main() {
     printf("Press 'ESC' when you want to restart your run.\n");
     while (1) {
         if ((GetAsyncKeyState(VK_ESCAPE) & 0x8001) && (!actionPerformed)) {
-            Sleep(1);
+            Sleep(100);
             keybd_event(VK_DOWN, 0, 0, 0);
             keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);
 
             keybd_event(VK_RIGHT, 0, 0, 0);
             keybd_event(VK_RIGHT, 0, KEYEVENTF_KEYUP, 0);
 
+            Sleep(100);
+            keybd_event(VK_RETURN, 0, 0, 0);
+            keybd_event(VK_RETURN, 0, KEYEVENTF_KEYUP, 0);
+
+            Sleep(100);
             keybd_event(VK_RETURN, 0, 0, 0);
             keybd_event(VK_RETURN, 0, KEYEVENTF_KEYUP, 0);
             actionPerformed = 1;
